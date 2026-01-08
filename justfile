@@ -1,6 +1,6 @@
 set shell := ["fish", "-c"]
 
-compile: init
+compile:
     compile c/main.c
     compile go/main.go
     compile javascript/main.js
@@ -66,9 +66,6 @@ run:
 
 serve:
     caddy file-server --listen :8080
-
-init:
-    bun install
 
 reset:
     rm -f \
