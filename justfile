@@ -18,6 +18,9 @@ lint:
     -lint go/unlinted.go
     -lint shell/unlinted.sh
 
+fix:
+    -lint --fix go/unlinted.go
+
 repl:
     repl fish
     repl sh
