@@ -1,4 +1,4 @@
-function helloWorld(): void {
-    const x: number = 1
+const x: number = 1
+if (!!x) {
     console.log('Hello, World!')
 }
