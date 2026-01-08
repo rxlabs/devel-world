@@ -75,14 +75,18 @@ reset:
         c/main \
         go/main \
         javascript/main.dist.js \
+        javascript/main.html \
         javascript/web/index.dist.js \
+        javascript/web/index.html \
         typescript/main.dist.js \
-        typescript/web/index.dist.js
-
+        typescript/main.html \
+        typescript/web/index.dist.js \
+        typescript/web/index.html
     git checkout \
         c/unformatted.c c/unlinted.c \
-        fish/unformatted.fish \
+        fish/unformatted.fish fish/unlinted.fish \
         go/unformatted.go go/unlinted.go \
         javascript/unformatted.js javascript/unlinted.js \
         shell/unformatted.sh shell/unformatted.zsh \
+        shell/unlinted.sh shell/unlinted.zsh \
         typescript/unformatted.ts typescript/unlinted.ts
