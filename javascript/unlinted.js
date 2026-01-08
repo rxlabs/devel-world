@@ -1,4 +1,4 @@
 const x = 1
 if (!!x) {
-    console.log('Hello, World!')
+  console.log('Hello, World!')
 }

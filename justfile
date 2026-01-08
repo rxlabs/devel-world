@@ -30,6 +30,25 @@ lint:
     -lint shell/unlinted.zsh
     -lint typescript/unlinted.ts
 
+reformat:
+    format c/main.c
+    format c/unlinted.c
+    format fish/main.fish
+    format fish/lib.fish
+    format fish/unlinted.fish
+    format go/main.go
+    format go/unlinted.go
+    format javascript/main.js
+    format javascript/lib.js
+    format javascript/unlinted.js
+    format shell/main.sh
+    format shell/main.zsh
+    format shell/unlinted.sh
+    format shell/unlinted.zsh
+    format typescript/main.ts
+    format typescript/lib.ts
+    format typescript/unlinted.ts
+
 repl:
     repl fish
     repl js
