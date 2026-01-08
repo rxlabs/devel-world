@@ -4,7 +4,9 @@ compile:
     compile c/main.c
     compile go/main.go
     compile javascript/main.js
+    compile javascript/web/index.jsx
     compile typescript/main.ts
+    compile typescript/web/index.tsx
 
 fix:
     -lint --fix c/unlinted.c
@@ -59,7 +61,9 @@ reset:
         c/main \
         go/main \
         javascript/main.dist.js \
-        typescript/main.dist.js
+        javascript/web/index.dist.js \
+        typescript/main.dist.js \
+        typescript/web/index.dist.js
 
     git checkout \
         c/unformatted.c c/unlinted.c \
