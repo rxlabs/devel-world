@@ -12,25 +12,31 @@ fix:
     -lint --fix c/unlinted.c
     -lint --fix go/unlinted.go
     -lint --fix javascript/unlinted.js
+    -lint --fix javascript/web/unlinted.jsx
     -lint --fix typescript/unlinted.ts
+    -lint --fix typescript/web/unlinted.tsx
 
 format:
     format c/unformatted.c
     format fish/unformatted.fish
     format go/unformatted.go
     format javascript/unformatted.js
+    format javascript/web/unformatted.jsx
     format shell/unformatted.sh
     format shell/unformatted.zsh
     format typescript/unformatted.ts
+    format typescript/web/unformatted.tsx
 
 lint:
     -lint c/unlinted.c
     -lint fish/unlinted.fish
     -lint go/unlinted.go
     -lint javascript/unlinted.js
+    -lint javascript/web/unlinted.jsx
     -lint shell/unlinted.sh
     -lint shell/unlinted.zsh
     -lint typescript/unlinted.ts
+    -lint typescript/web/unlinted.tsx
 
 reformat:
     format c/main.c
@@ -43,6 +49,8 @@ reformat:
     format javascript/main.js
     format javascript/lib.js
     format javascript/unlinted.js
+    format javascript/web/index.jsx
+    format javascript/web/unlinted.jsx
     format shell/main.sh
     format shell/main.zsh
     format shell/unlinted.sh
@@ -50,6 +58,8 @@ reformat:
     format typescript/main.ts
     format typescript/lib.ts
     format typescript/unlinted.ts
+    format typescript/web/index.tsx
+    format typescript/web/unlinted.tsx
 
 repl:
     repl fish
@@ -72,18 +82,30 @@ reset:
         c/main \
         go/main \
         javascript/main.dist.js \
-        javascript/main.html \
         javascript/web/index.dist.js \
         javascript/web/index.html \
         typescript/main.dist.js \
-        typescript/main.html \
         typescript/web/index.dist.js \
-        typescript/web/index.html
+        typescript/web/index.html \
+        typescript/web/unformatted.html \
+        typescript/web/unlinted.html
+
     git checkout \
-        c/unformatted.c c/unlinted.c \
-        fish/unformatted.fish fish/unlinted.fish \
-        go/unformatted.go go/unlinted.go \
-        javascript/unformatted.js javascript/unlinted.js \
-        shell/unformatted.sh shell/unformatted.zsh \
-        shell/unlinted.sh shell/unlinted.zsh \
-        typescript/unformatted.ts typescript/unlinted.ts
+        c/unformatted.c \
+        c/unlinted.c \
+        fish/unformatted.fish \
+        fish/unlinted.fish \
+        go/unformatted.go \
+        go/unlinted.go \
+        javascript/unformatted.js \
+        javascript/unlinted.js \
+        javascript/web/unformatted.jsx \
+        javascript/web/unlinted.jsx \
+        shell/unformatted.sh\
+        shell/unformatted.zsh \
+        shell/unlinted.sh\
+        shell/unlinted.zsh \
+        typescript/unformatted.ts\
+        typescript/unlinted.ts \
+        typescript/web/unformatted.tsx\
+        typescript/web/unlinted.tsx
