@@ -55,7 +55,12 @@ repl:
     repl ts
 
 reset:
-    rm -f c/main go/main
+    rm -f \
+        c/main \
+        go/main \
+        javascript/main.dist.js \
+        typescript/main.dist.js
+
     git checkout \
         c/unformatted.c c/unlinted.c \
         fish/unformatted.fish \
