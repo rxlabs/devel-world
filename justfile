@@ -64,6 +64,9 @@ run:
     run shell/main.zsh
     run typescript/main.ts
 
+serve:
+    caddy file-server --listen :8080
+
 init:
     bun install
 
