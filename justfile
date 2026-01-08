@@ -1,12 +1,10 @@
 set shell := ["fish", "-c"]
 
-run:
-    run fish/main.fish
-    run go/main.go
-    run shell/main.sh
-
 compile:
     compile go/main.go
+
+fix:
+    -lint --fix go/unlinted.go
 
 format:
     format fish/unformatted.fish
@@ -18,9 +16,11 @@ lint:
     -lint go/unlinted.go
     -lint shell/unlinted.sh
 
-fix:
-    -lint --fix go/unlinted.go
-
 repl:
     repl fish
     repl sh
+
+run:
+    run fish/main.fish
+    run go/main.go
+    run shell/main.sh
