@@ -1,6 +1,6 @@
 set shell := ["fish", "-c"]
 
-compile:
+compile: init
     compile c/main.c
     compile go/main.go
     compile javascript/main.js
@@ -56,6 +56,17 @@ repl:
     repl js
     repl ts
 
+run:
+    run fish/main.fish
+    run go/main.go
+    run javascript/main.js
+    run shell/main.sh
+    run shell/main.zsh
+    run typescript/main.ts
+
+init:
+    bun install
+
 reset:
     rm -f \
         c/main \
@@ -72,11 +83,3 @@ reset:
         javascript/unformatted.js javascript/unlinted.js \
         shell/unformatted.sh shell/unformatted.zsh \
         typescript/unformatted.ts typescript/unlinted.ts
-
-run:
-    run fish/main.fish
-    run go/main.go
-    run javascript/main.js
-    run shell/main.sh
-    run shell/main.zsh
-    run typescript/main.ts
