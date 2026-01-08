@@ -1,33 +1,54 @@
 set shell := ["fish", "-c"]
 
 compile:
+    compile c/main.c
     compile go/main.go
+    compile javascript/main.js
+    compile typescript/main.ts
 
 fix:
+    -lint --fix c/unlinted.c
     -lint --fix go/unlinted.go
+    -lint --fix javascript/unlinted.js
+    -lint --fix typescript/unlinted.ts
 
 format:
+    format c/unformatted.c
     format fish/unformatted.fish
     format go/unformatted.go
+    format javascript/unformatted.js
     format shell/unformatted.sh
+    format shell/unformatted.zsh
+    format typescript/unformatted.ts
 
 lint:
+    -lint c/unlinted.c
     -lint fish/unlinted.fish
     -lint go/unlinted.go
+    -lint javascript/unlinted.js
     -lint shell/unlinted.sh
+    -lint shell/unlinted.zsh
+    -lint typescript/unlinted.ts
 
 repl:
     repl fish
-    repl sh
+    repl js
+    repl ts
 
 reset:
-    rm -f go/main
+    rm -f c/main go/main
     git checkout \
+        c/unformatted.c c/unlinted.c \
         fish/unformatted.fish \
-        go/unlinted.go go/unformatted.go \
-        shell/unformatted.sh
+        go/unformatted.go go/unlinted.go \
+        javascript/unformatted.js javascript/unlinted.js \
+        shell/unformatted.sh shell/unformatted.zsh \
+        typescript/unformatted.ts typescript/unlinted.ts
 
 run:
     run fish/main.fish
     run go/main.go
+    run javascript/main.js
     run shell/main.sh
+    run shell/main.zsh
+    run typescript/main.ts
