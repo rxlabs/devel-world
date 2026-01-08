@@ -20,6 +20,13 @@ repl:
     repl fish
     repl sh
 
+reset:
+    rm -f go/main
+    git checkout \
+        fish/unformatted.fish \
+        go/unlinted.go go/unformatted.go \
+        shell/unformatted.sh
+
 run:
     run fish/main.fish
     run go/main.go

@@ -1,10 +1,7 @@
 package main
 
-import (
-	"fmt"
-	"os"
-)
+import "fmt"
 
 func main() {
-	fmt.Println("Hello, World!")
+	fmt.Println(fmt.Sprintf("Hello, World!"))
 }
