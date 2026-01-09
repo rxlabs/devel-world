@@ -3,40 +3,40 @@ set shell := ["fish", "-c"]
 compile:
     compile c/main.c
     compile go/main.go
-    compile javascript/main.js
-    compile javascript/web/index.jsx
-    compile typescript/main.ts
-    compile typescript/web/index.tsx
+    compile javascript/index.js
+    compile javascript/react/index.jsx
+    compile typescript/index.ts
+    compile typescript/react/index.tsx
 
 fix:
     -lint --fix c/unlinted.c
     -lint --fix go/unlinted.go
     -lint --fix javascript/unlinted.js
-    -lint --fix javascript/web/unlinted.jsx
+    -lint --fix javascript/react/unlinted.jsx
     -lint --fix typescript/unlinted.ts
-    -lint --fix typescript/web/unlinted.tsx
+    -lint --fix typescript/react/unlinted.tsx
 
 format:
     format c/unformatted.c
     format fish/unformatted.fish
     format go/unformatted.go
     format javascript/unformatted.js
-    format javascript/web/unformatted.jsx
+    format javascript/react/unformatted.jsx
     format shell/unformatted.sh
     format shell/unformatted.zsh
     format typescript/unformatted.ts
-    format typescript/web/unformatted.tsx
+    format typescript/react/unformatted.tsx
 
 lint:
     -lint c/unlinted.c
     -lint fish/unlinted.fish
     -lint go/unlinted.go
     -lint javascript/unlinted.js
-    -lint javascript/web/unlinted.jsx
+    -lint javascript/react/unlinted.jsx
     -lint shell/unlinted.sh
     -lint shell/unlinted.zsh
     -lint typescript/unlinted.ts
-    -lint typescript/web/unlinted.tsx
+    -lint typescript/react/unlinted.tsx
 
 reformat:
     format c/main.c
@@ -47,19 +47,21 @@ reformat:
     format go/main.go
     format go/unlinted.go
     format javascript/main.js
+    format javascript/index.js
     format javascript/lib.js
     format javascript/unlinted.js
-    format javascript/web/index.jsx
-    format javascript/web/unlinted.jsx
+    format javascript/react/index.jsx
+    format javascript/react/unlinted.jsx
     format shell/main.sh
     format shell/main.zsh
     format shell/unlinted.sh
     format shell/unlinted.zsh
     format typescript/main.ts
+    format typescript/index.ts
     format typescript/lib.ts
     format typescript/unlinted.ts
-    format typescript/web/index.tsx
-    format typescript/web/unlinted.tsx
+    format typescript/react/index.tsx
+    format typescript/react/unlinted.tsx
 
 repl:
     repl fish
@@ -82,13 +84,15 @@ reset:
         c/main \
         go/main \
         javascript/main.dist.js \
-        javascript/web/index.dist.js \
-        javascript/web/index.html \
+        javascript/index.dist.js \
+        javascript/index.html \
+        javascript/react/index.dist.js \
+        javascript/react/index.html \
         typescript/main.dist.js \
-        typescript/web/index.dist.js \
-        typescript/web/index.html \
-        typescript/web/unformatted.html \
-        typescript/web/unlinted.html
+        typescript/index.dist.js \
+        typescript/index.html \
+        typescript/react/index.dist.js \
+        typescript/react/index.html \
 
     git checkout \
         c/unformatted.c \
@@ -99,13 +103,13 @@ reset:
         go/unlinted.go \
         javascript/unformatted.js \
         javascript/unlinted.js \
-        javascript/web/unformatted.jsx \
-        javascript/web/unlinted.jsx \
+        javascript/react/unformatted.jsx \
+        javascript/react/unlinted.jsx \
         shell/unformatted.sh \
         shell/unformatted.zsh \
         shell/unlinted.sh \
         shell/unlinted.zsh \
         typescript/unformatted.ts \
         typescript/unlinted.ts \
-        typescript/web/unformatted.tsx \
-        typescript/web/unlinted.tsx
+        typescript/react/unformatted.tsx \
+        typescript/react/unlinted.tsx
