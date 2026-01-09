@@ -101,11 +101,11 @@ reset:
         javascript/unlinted.js \
         javascript/web/unformatted.jsx \
         javascript/web/unlinted.jsx \
-        shell/unformatted.sh\
+        shell/unformatted.sh \
         shell/unformatted.zsh \
-        shell/unlinted.sh\
+        shell/unlinted.sh \
         shell/unlinted.zsh \
-        typescript/unformatted.ts\
+        typescript/unformatted.ts \
         typescript/unlinted.ts \
-        typescript/web/unformatted.tsx\
+        typescript/web/unformatted.tsx \
         typescript/web/unlinted.tsx
