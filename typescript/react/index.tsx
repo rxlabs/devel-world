@@ -1,5 +1,7 @@
 import { createRoot } from 'react-dom/client'
 
-const App = () => <h1>Hello, World!</h1>
+const message: string = 'Hello, World!'
+
+const App = () => <h1>{message}</h1>
 
 createRoot(document.getElementById('root')).render(<App />)
