@@ -38,34 +38,6 @@ lint:
     -lint typescript/unlinted.ts
     -lint typescript/react/unlinted.tsx
 
-reformat:
-    format c/main.c
-    format c/unlinted.c
-    format c/untyped.c
-    format fish/main.fish
-    format fish/lib.fish
-    format fish/unlinted.fish
-    format go/main.go
-    format go/unlinted.go
-    format javascript/main.js
-    format javascript/index.js
-    format javascript/lib.js
-    format javascript/unlinted.js
-    format javascript/react/index.jsx
-    format javascript/react/unlinted.jsx
-    format shell/main.sh
-    format shell/main.zsh
-    format shell/unlinted.sh
-    format shell/unlinted.zsh
-    format typescript/main.ts
-    format typescript/index.ts
-    format typescript/lib.ts
-    format typescript/unlinted.ts
-    format typescript/untyped.ts
-    format typescript/react/index.tsx
-    format typescript/react/unlinted.tsx
-    format typescript/react/untyped.tsx
-
 repl:
     repl fish
     repl js
@@ -87,13 +59,6 @@ typecheck:
 
 serve:
     caddy file-server --listen :8080
-
-check:
-    typecheck c/main.c
-    typecheck go/main.go
-    typecheck typescript/main.ts
-    typecheck typescript/lib.ts
-    typecheck typescript/react/index.tsx
 
 reset:
     rm -f \
@@ -129,3 +94,38 @@ reset:
         typescript/unlinted.ts \
         typescript/react/unformatted.tsx \
         typescript/react/unlinted.tsx
+
+check:
+    typecheck c/main.c
+    typecheck go/main.go
+    typecheck typescript/main.ts
+    typecheck typescript/lib.ts
+    typecheck typescript/react/index.tsx
+
+reformat:
+    format c/main.c
+    format c/unlinted.c
+    format c/untyped.c
+    format fish/main.fish
+    format fish/lib.fish
+    format fish/unlinted.fish
+    format go/main.go
+    format go/unlinted.go
+    format javascript/main.js
+    format javascript/index.js
+    format javascript/lib.js
+    format javascript/unlinted.js
+    format javascript/react/index.jsx
+    format javascript/react/unlinted.jsx
+    format shell/main.sh
+    format shell/main.zsh
+    format shell/unlinted.sh
+    format shell/unlinted.zsh
+    format typescript/main.ts
+    format typescript/index.ts
+    format typescript/lib.ts
+    format typescript/unlinted.ts
+    format typescript/untyped.ts
+    format typescript/react/index.tsx
+    format typescript/react/unlinted.tsx
+    format typescript/react/untyped.tsx
