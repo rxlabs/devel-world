@@ -76,6 +76,17 @@ run:
     run shell/main.zsh
     run typescript/main.ts
 
+typecheck:
+    go vet go/main.go
+    -go vet go/untyped.go
+    tsc --noEmit typescript/main.ts
+    tsc --noEmit typescript/lib.ts
+    -tsc --noEmit typescript/untyped.ts
+    tsc --noEmit --jsx react-jsx --skipLibCheck typescript/react/index.tsx
+    -tsc --noEmit --jsx react-jsx --skipLibCheck typescript/react/untyped.tsx
+    clang -fsyntax-only c/main.c
+    -clang -fsyntax-only c/untyped.c
+
 serve:
     caddy file-server --listen :8080
 
