@@ -41,6 +41,7 @@ lint:
 reformat:
     format c/main.c
     format c/unlinted.c
+    format c/untyped.c
     format fish/main.fish
     format fish/lib.fish
     format fish/unlinted.fish
@@ -60,8 +61,10 @@ reformat:
     format typescript/index.ts
     format typescript/lib.ts
     format typescript/unlinted.ts
+    format typescript/untyped.ts
     format typescript/react/index.tsx
     format typescript/react/unlinted.tsx
+    format typescript/react/untyped.tsx
 
 repl:
     repl fish
@@ -77,18 +80,20 @@ run:
     run typescript/main.ts
 
 typecheck:
-    go vet go/main.go
-    -go vet go/untyped.go
-    tsc --noEmit typescript/main.ts
-    tsc --noEmit typescript/lib.ts
-    -tsc --noEmit typescript/untyped.ts
-    tsc --noEmit --jsx react-jsx --skipLibCheck typescript/react/index.tsx
-    -tsc --noEmit --jsx react-jsx --skipLibCheck typescript/react/untyped.tsx
-    clang -fsyntax-only c/main.c
-    -clang -fsyntax-only c/untyped.c
+    -typecheck c/untyped.c
+    -typecheck go/untyped.go
+    -typecheck typescript/untyped.ts
+    -typecheck typescript/react/untyped.tsx
 
 serve:
     caddy file-server --listen :8080
+
+check:
+    typecheck c/main.c
+    typecheck go/main.go
+    typecheck typescript/main.ts
+    typecheck typescript/lib.ts
+    typecheck typescript/react/index.tsx
 
 reset:
     rm -f \
