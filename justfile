@@ -9,12 +9,12 @@ compile:
     compile typescript/react/index.tsx
 
 fix:
-    -lint --fix c/unlinted.c
-    -lint --fix go/unlinted.go
-    -lint --fix javascript/unlinted.js
-    -lint --fix javascript/react/unlinted.jsx
-    -lint --fix typescript/unlinted.ts
-    -lint --fix typescript/react/unlinted.tsx
+    -fix c/unlinted.c
+    -fix go/unlinted.go
+    -fix javascript/unlinted.js
+    -fix javascript/react/unlinted.jsx
+    -fix typescript/unlinted.ts
+    -fix typescript/react/unlinted.tsx
 
 format:
     format c/unformatted.c
