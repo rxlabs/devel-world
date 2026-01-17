@@ -42,10 +42,10 @@ lint:
     -lint typescript/react/unlinted.tsx
 
 repl:
-    repl fish
-    repl js
+    repl fish/lib.fish
+    repl javascript/lib.js
     repl python/lib.py
-    repl ts
+    repl typescript/lib.ts
 
 run:
     run fish/main.fish
