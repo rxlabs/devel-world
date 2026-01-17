@@ -1,6 +1,4 @@
 def hello_world
-  x = 1
-  return unless !!x
-
-  puts 'Hello, World!'
+  foo = 1
+  puts "Hello, World!"
 end
