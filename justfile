@@ -13,6 +13,7 @@ fix:
     -fix go/unlinted.go
     -fix javascript/unlinted.js
     -fix javascript/react/unlinted.jsx
+    -fix python/unlinted.py
     -fix typescript/unlinted.ts
     -fix typescript/react/unlinted.tsx
 
@@ -22,6 +23,7 @@ format:
     format go/unformatted.go
     format javascript/unformatted.js
     format javascript/react/unformatted.jsx
+    format python/unformatted.py
     format shell/unformatted.sh
     format shell/unformatted.zsh
     format typescript/unformatted.ts
@@ -33,6 +35,7 @@ lint:
     -lint go/unlinted.go
     -lint javascript/unlinted.js
     -lint javascript/react/unlinted.jsx
+    -lint python/unlinted.py
     -lint shell/unlinted.sh
     -lint shell/unlinted.zsh
     -lint typescript/unlinted.ts
@@ -41,12 +44,14 @@ lint:
 repl:
     repl fish
     repl js
+    repl python/lib.py
     repl ts
 
 run:
     run fish/main.fish
     run go/main.go
     run javascript/main.js
+    run python/main.py
     run shell/main.sh
     run shell/main.zsh
     run typescript/main.ts
@@ -54,6 +59,7 @@ run:
 typecheck:
     -typecheck c/untyped.c
     -typecheck go/untyped.go
+    -typecheck python/untyped.py
     -typecheck typescript/untyped.ts
     -typecheck typescript/react/untyped.tsx
 
@@ -86,6 +92,8 @@ reset:
         javascript/unlinted.js \
         javascript/react/unformatted.jsx \
         javascript/react/unlinted.jsx \
+        python/unformatted.py \
+        python/unlinted.py \
         shell/unformatted.sh \
         shell/unformatted.zsh \
         shell/unlinted.sh \
@@ -98,6 +106,8 @@ reset:
 check:
     typecheck c/main.c
     typecheck go/main.go
+    typecheck python/main.py
+    typecheck python/lib.py
     typecheck typescript/main.ts
     typecheck typescript/lib.ts
     typecheck typescript/react/index.tsx
@@ -117,6 +127,10 @@ reformat:
     format javascript/unlinted.js
     format javascript/react/index.jsx
     format javascript/react/unlinted.jsx
+    format python/main.py
+    format python/lib.py
+    format python/unlinted.py
+    format python/untyped.py
     format shell/main.sh
     format shell/main.zsh
     format shell/unlinted.sh
