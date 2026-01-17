@@ -56,12 +56,12 @@ run:
     run shell/main.zsh
     run typescript/main.ts
 
-typecheck:
-    -typecheck c/untyped.c
-    -typecheck go/untyped.go
-    -typecheck python/untyped.py
-    -typecheck typescript/untyped.ts
-    -typecheck typescript/react/untyped.tsx
+check:
+    -check c/unchecked.c
+    -check go/unchecked.go
+    -check python/unchecked.py
+    -check typescript/unchecked.ts
+    -check typescript/react/unchecked.tsx
 
 serve:
     caddy file-server --listen :8080
@@ -103,19 +103,19 @@ reset:
         typescript/react/unformatted.tsx \
         typescript/react/unlinted.tsx
 
-check:
-    typecheck c/main.c
-    typecheck go/main.go
-    typecheck python/main.py
-    typecheck python/lib.py
-    typecheck typescript/main.ts
-    typecheck typescript/lib.ts
-    typecheck typescript/react/index.tsx
+recheck:
+    check c/main.c
+    check go/main.go
+    check python/main.py
+    check python/lib.py
+    check typescript/main.ts
+    check typescript/lib.ts
+    check typescript/react/index.tsx
 
 reformat:
     format c/main.c
     format c/unlinted.c
-    format c/untyped.c
+    format c/unchecked.c
     format fish/main.fish
     format fish/lib.fish
     format fish/unlinted.fish
@@ -130,7 +130,7 @@ reformat:
     format python/main.py
     format python/lib.py
     format python/unlinted.py
-    format python/untyped.py
+    format python/unchecked.py
     format shell/main.sh
     format shell/main.zsh
     format shell/unlinted.sh
@@ -139,7 +139,7 @@ reformat:
     format typescript/index.ts
     format typescript/lib.ts
     format typescript/unlinted.ts
-    format typescript/untyped.ts
+    format typescript/unchecked.ts
     format typescript/react/index.tsx
     format typescript/react/unlinted.tsx
-    format typescript/react/untyped.tsx
+    format typescript/react/unchecked.tsx
