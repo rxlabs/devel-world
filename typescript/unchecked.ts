@@ -1,3 +1,3 @@
-const value: number = 'not a number' // type error: string not assignable to number
+const value: number = 'not a number'
 
 export { value }
