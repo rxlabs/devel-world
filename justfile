@@ -14,6 +14,7 @@ fix:
     -fix javascript/unlinted.js
     -fix javascript/react/unlinted.jsx
     -fix python/unlinted.py
+    -fix ruby/unlinted.rb
     -fix typescript/unlinted.ts
     -fix typescript/react/unlinted.tsx
 
@@ -24,6 +25,7 @@ format:
     format javascript/unformatted.js
     format javascript/react/unformatted.jsx
     format python/unformatted.py
+    format ruby/unformatted.rb
     format shell/unformatted.sh
     format shell/unformatted.zsh
     format typescript/unformatted.ts
@@ -36,6 +38,7 @@ lint:
     -lint javascript/unlinted.js
     -lint javascript/react/unlinted.jsx
     -lint python/unlinted.py
+    -lint ruby/unlinted.rb
     -lint shell/unlinted.sh
     -lint shell/unlinted.zsh
     -lint typescript/unlinted.ts
@@ -45,6 +48,7 @@ repl:
     repl fish/lib.fish
     repl javascript/lib.js
     repl python/lib.py
+    repl ruby/lib.rb
     repl typescript/lib.ts
 
 run:
@@ -52,6 +56,7 @@ run:
     run go/main.go
     run javascript/main.js
     run python/main.py
+    run ruby/main.rb
     run shell/main.sh
     run shell/main.zsh
     run typescript/main.ts
@@ -94,6 +99,8 @@ reset:
         javascript/react/unlinted.jsx \
         python/unformatted.py \
         python/unlinted.py \
+        ruby/unformatted.rb \
+        ruby/unlinted.rb \
         shell/unformatted.sh \
         shell/unformatted.zsh \
         shell/unlinted.sh \
@@ -108,6 +115,8 @@ recheck:
     check go/main.go
     check python/main.py
     check python/lib.py
+    check ruby/main.rb
+    check ruby/lib.rb
     check typescript/main.ts
     check typescript/lib.ts
     check typescript/react/index.tsx
@@ -131,6 +140,9 @@ reformat:
     format python/lib.py
     format python/unlinted.py
     format python/unchecked.py
+    format ruby/main.rb
+    format ruby/lib.rb
+    format ruby/unlinted.rb
     format shell/main.sh
     format shell/main.zsh
     format shell/unlinted.sh
