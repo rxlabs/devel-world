@@ -31,6 +31,19 @@ format:
     format typescript/unformatted.ts
     format typescript/react/unformatted.tsx
 
+format_stdin:
+    cat c/unformatted.c | format
+    cat fish/unformatted.fish | format
+    cat go/unformatted.go | format
+    cat javascript/unformatted.js | format
+    cat javascript/react/unformatted.jsx | format
+    cat python/unformatted.py | format
+    cat ruby/unformatted.rb | format
+    cat shell/unformatted.sh | format
+    cat shell/unformatted.zsh | format
+    cat typescript/unformatted.ts | format
+    cat typescript/react/unformatted.tsx | format
+
 lint:
     -lint c/unlinted.c
     -lint fish/unlinted.fish
@@ -43,6 +56,19 @@ lint:
     -lint shell/unlinted.zsh
     -lint typescript/unlinted.ts
     -lint typescript/react/unlinted.tsx
+
+lint_stdin:
+    -cat c/unlinted.c | lint --extension c
+    -cat fish/unlinted.fish | lint --extension fish
+    -cat go/unlinted.go | lint --extension go
+    -cat javascript/unlinted.js | lint --extension js
+    -cat javascript/react/unlinted.jsx | lint --extension jsx
+    -cat python/unlinted.py | lint --extension py
+    -cat ruby/unlinted.rb | lint --extension rb
+    -cat shell/unlinted.sh | lint --extension sh
+    -cat shell/unlinted.zsh | lint --extension zsh
+    -cat typescript/unlinted.ts | lint --extension ts
+    -cat typescript/react/unlinted.tsx | lint --extension tsx
 
 repl:
     repl fish/lib.fish
