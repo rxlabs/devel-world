@@ -32,17 +32,17 @@ format:
     format typescript/react/unformatted.tsx
 
 format_stdin:
-    cat c/unformatted.c | format
-    cat fish/unformatted.fish | format
-    cat go/unformatted.go | format
-    cat javascript/unformatted.js | format
-    cat javascript/react/unformatted.jsx | format
-    cat python/unformatted.py | format
-    cat ruby/unformatted.rb | format
-    cat shell/unformatted.sh | format
-    cat shell/unformatted.zsh | format
-    cat typescript/unformatted.ts | format
-    cat typescript/react/unformatted.tsx | format
+    cat c/unformatted.c | format -e c
+    cat fish/unformatted.fish | format -e fish
+    cat go/unformatted.go | format -e go
+    cat javascript/unformatted.js | format -e js
+    cat javascript/react/unformatted.jsx | format -e jsx
+    cat python/unformatted.py | format -e py
+    cat ruby/unformatted.rb | format -e rb
+    cat shell/unformatted.sh | format -e sh
+    cat shell/unformatted.zsh | format -e zsh
+    cat typescript/unformatted.ts | format -e ts
+    cat typescript/react/unformatted.tsx | format -e tsx
 
 lint:
     -lint c/unlinted.c
