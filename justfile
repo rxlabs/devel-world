@@ -78,6 +78,7 @@ repl:
     repl typescript/lib.ts
 
 run:
+    run c/main.c
     run fish/main.fish
     run go/main.go
     run javascript/main.js
