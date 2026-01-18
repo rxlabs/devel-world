@@ -88,6 +88,17 @@ run:
     run shell/main.zsh
     run typescript/main.ts
 
+run_stdin:
+    cat c/main.c | run -e c
+    cat fish/main.fish | run -e fish
+    cat go/main.go | run -e go
+    cat javascript/main.js | run -e js
+    cat python/main.py | run -e py
+    cat ruby/main.rb | run -e rb
+    cat shell/main.sh | run -e sh
+    cat shell/main.zsh | run -e zsh
+    cat typescript/main.ts | run -e ts
+
 check:
     -check c/unchecked.c
     -check go/unchecked.go
