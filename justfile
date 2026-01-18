@@ -18,6 +18,17 @@ fix:
     -fix typescript/unlinted.ts
     -fix typescript/react/unlinted.tsx
 
+# TODO
+# fix_stdin:
+#     -cat c/unlinted.c | fix -e c
+#     -cat go/unlinted.go | fix -e go
+#     -cat javascript/unlinted.js | fix -e js
+#     -cat javascript/react/unlinted.jsx | fix -e jsx
+#     -cat python/unlinted.py | fix -e py
+#     -cat ruby/unlinted.rb | fix -e rb
+#     -cat typescript/unlinted.ts | fix -e ts
+#     -cat typescript/react/unlinted.tsx | fix -e tsx
+
 format:
     format c/unformatted.c
     format fish/unformatted.fish
@@ -105,6 +116,14 @@ check:
     -check python/unchecked.py
     -check typescript/unchecked.ts
     -check typescript/react/unchecked.tsx
+
+# TODO
+# check_stdin:
+#     -cat c/unchecked.c | check -e c
+#     -cat go/unchecked.go | check -e go
+#     -cat python/unchecked.py | check -e py
+#     -cat typescript/unchecked.ts | check -e ts
+#     -cat typescript/react/unchecked.tsx | check -e tsx
 
 serve:
     caddy file-server --listen :8080
