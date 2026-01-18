@@ -9,7 +9,6 @@ compile:
     compile typescript/react/index.tsx
 
 fix:
-    -fix c/unlinted.c
     -fix css/unlinted.css
     -fix go/unlinted.go
     -fix javascript/unlinted.js
@@ -21,7 +20,6 @@ fix:
 
 # TODO
 # fix_stdin:
-#     -cat c/unlinted.c | fix -e c
 #     -cat css/unlinted.css | fix -e css
 #     -cat go/unlinted.go | fix -e go
 #     -cat javascript/unlinted.js | fix -e js
@@ -62,7 +60,6 @@ format_stdin:
     cat typescript/react/unformatted.tsx | format -e tsx
 
 lint:
-    -lint c/unlinted.c
     -lint css/unlinted.css
     -lint fish/unlinted.fish
     -lint go/unlinted.go
@@ -77,7 +74,6 @@ lint:
     -lint typescript/react/unlinted.tsx
 
 lint_stdin:
-    -cat c/unlinted.c | lint --extension c
     -cat css/unlinted.css | lint --extension css
     -cat fish/unlinted.fish | lint --extension fish
     -cat go/unlinted.go | lint --extension go
@@ -155,7 +151,6 @@ reset:
 
     git checkout \
         c/unformatted.c \
-        c/unlinted.c \
         css/unformatted.css \
         css/unlinted.css \
         fish/unformatted.fish \
@@ -193,7 +188,6 @@ recheck:
 
 reformat:
     format c/main.c
-    format c/unlinted.c
     format c/unchecked.c
     format css/unlinted.css
     format fish/main.fish
