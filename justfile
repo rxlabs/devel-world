@@ -126,7 +126,7 @@ check:
 #     -cat typescript/react/unchecked.tsx | check -e tsx
 
 serve:
-    caddy file-server --listen :8080
+    serve
 
 reset:
     rm -f \
