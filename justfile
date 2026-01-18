@@ -10,6 +10,7 @@ compile:
 
 fix:
     -fix c/unlinted.c
+    -fix css/unlinted.css
     -fix go/unlinted.go
     -fix javascript/unlinted.js
     -fix javascript/react/unlinted.jsx
@@ -21,6 +22,7 @@ fix:
 # TODO
 # fix_stdin:
 #     -cat c/unlinted.c | fix -e c
+#     -cat css/unlinted.css | fix -e css
 #     -cat go/unlinted.go | fix -e go
 #     -cat javascript/unlinted.js | fix -e js
 #     -cat javascript/react/unlinted.jsx | fix -e jsx
@@ -31,10 +33,12 @@ fix:
 
 format:
     format c/unformatted.c
+    format css/unformatted.css
     format fish/unformatted.fish
     format go/unformatted.go
     format javascript/unformatted.js
     format javascript/react/unformatted.jsx
+    format json/unformatted.json
     format python/unformatted.py
     format ruby/unformatted.rb
     format shell/unformatted.sh
@@ -44,10 +48,12 @@ format:
 
 format_stdin:
     cat c/unformatted.c | format -e c
+    cat css/unformatted.css | format -e css
     cat fish/unformatted.fish | format -e fish
     cat go/unformatted.go | format -e go
     cat javascript/unformatted.js | format -e js
     cat javascript/react/unformatted.jsx | format -e jsx
+    cat json/unformatted.json | format -e json
     cat python/unformatted.py | format -e py
     cat ruby/unformatted.rb | format -e rb
     cat shell/unformatted.sh | format -e sh
@@ -57,10 +63,12 @@ format_stdin:
 
 lint:
     -lint c/unlinted.c
+    -lint css/unlinted.css
     -lint fish/unlinted.fish
     -lint go/unlinted.go
     -lint javascript/unlinted.js
     -lint javascript/react/unlinted.jsx
+    -lint json/unlinted.json
     -lint python/unlinted.py
     -lint ruby/unlinted.rb
     -lint shell/unlinted.sh
@@ -70,10 +78,12 @@ lint:
 
 lint_stdin:
     -cat c/unlinted.c | lint --extension c
+    -cat css/unlinted.css | lint --extension css
     -cat fish/unlinted.fish | lint --extension fish
     -cat go/unlinted.go | lint --extension go
     -cat javascript/unlinted.js | lint --extension js
     -cat javascript/react/unlinted.jsx | lint --extension jsx
+    -cat json/unlinted.json | lint --extension json
     -cat python/unlinted.py | lint --extension py
     -cat ruby/unlinted.rb | lint --extension rb
     -cat shell/unlinted.sh | lint --extension sh
@@ -146,6 +156,8 @@ reset:
     git checkout \
         c/unformatted.c \
         c/unlinted.c \
+        css/unformatted.css \
+        css/unlinted.css \
         fish/unformatted.fish \
         fish/unlinted.fish \
         go/unformatted.go \
@@ -154,6 +166,7 @@ reset:
         javascript/unlinted.js \
         javascript/react/unformatted.jsx \
         javascript/react/unlinted.jsx \
+        json/unformatted.json \
         python/unformatted.py \
         python/unlinted.py \
         ruby/unformatted.rb \
@@ -182,6 +195,7 @@ reformat:
     format c/main.c
     format c/unlinted.c
     format c/unchecked.c
+    format css/unlinted.css
     format fish/main.fish
     format fish/lib.fish
     format fish/unlinted.fish
@@ -193,6 +207,7 @@ reformat:
     format javascript/unlinted.js
     format javascript/react/index.jsx
     format javascript/react/unlinted.jsx
+    format json/unlinted.json
     format python/main.py
     format python/lib.py
     format python/unlinted.py
