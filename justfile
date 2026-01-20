@@ -34,6 +34,7 @@ format:
     format css/unformatted.css
     format fish/unformatted.fish
     format go/unformatted.go
+    format html/unformatted.html
     format javascript/unformatted.js
     format javascript/react/unformatted.jsx
     format json/unformatted.json
@@ -49,6 +50,7 @@ format_stdin:
     cat css/unformatted.css | format -e css
     cat fish/unformatted.fish | format -e fish
     cat go/unformatted.go | format -e go
+    cat html/unformatted.html | format -e html
     cat javascript/unformatted.js | format -e js
     cat javascript/react/unformatted.jsx | format -e jsx
     cat json/unformatted.json | format -e json
@@ -157,6 +159,7 @@ reset:
         fish/unlinted.fish \
         go/unformatted.go \
         go/unlinted.go \
+        html/unformatted.html \
         javascript/unformatted.js \
         javascript/unlinted.js \
         javascript/react/unformatted.jsx \
@@ -187,6 +190,7 @@ recheck:
     check typescript/react/index.tsx
 
 reformat:
+    format index.html
     format c/main.c
     format c/unchecked.c
     format css/unlinted.css
