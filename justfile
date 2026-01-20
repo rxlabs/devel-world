@@ -70,6 +70,7 @@ format_stdin:
     cat yaml/unformatted.yaml | format -e yaml
 
 lint:
+    -lint clojure/unlinted.clj
     -lint css/unlinted.css
     -lint fish/unlinted.fish
     -lint go/unlinted.go
@@ -85,6 +86,7 @@ lint:
     -lint typescript/react/unlinted.tsx
 
 lint_stdin:
+    -cat clojure/unlinted.clj | lint --extension clj
     -cat css/unlinted.css | lint --extension css
     -cat fish/unlinted.fish | lint --extension fish
     -cat go/unlinted.go | lint --extension go
@@ -164,6 +166,7 @@ reset:
     git checkout \
         c/unformatted.c \
         clojure/unformatted.clj \
+        clojure/unlinted.clj \
         css/unformatted.css \
         css/unlinted.css \
         graphql/unformatted.graphql \
@@ -208,6 +211,7 @@ reformat:
     format index.html
     format c/main.c
     format c/unchecked.c
+    format clojure/unlinted.clj
     format css/unlinted.css
     format fish/main.fish
     format fish/lib.fish
