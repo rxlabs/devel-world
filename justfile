@@ -39,12 +39,14 @@ format:
     format javascript/unformatted.js
     format javascript/react/unformatted.jsx
     format json/unformatted.json
+    format markdown/unformatted.md
     format python/unformatted.py
     format ruby/unformatted.rb
     format shell/unformatted.sh
     format shell/unformatted.zsh
     format typescript/unformatted.ts
     format typescript/react/unformatted.tsx
+    format yaml/unformatted.yaml
 
 format_stdin:
     cat c/unformatted.c | format -e c
@@ -56,12 +58,14 @@ format_stdin:
     cat javascript/unformatted.js | format -e js
     cat javascript/react/unformatted.jsx | format -e jsx
     cat json/unformatted.json | format -e json
+    cat markdown/unformatted.md | format -e md
     cat python/unformatted.py | format -e py
     cat ruby/unformatted.rb | format -e rb
     cat shell/unformatted.sh | format -e sh
     cat shell/unformatted.zsh | format -e zsh
     cat typescript/unformatted.ts | format -e ts
     cat typescript/react/unformatted.tsx | format -e tsx
+    cat yaml/unformatted.yaml | format -e yaml
 
 lint:
     -lint css/unlinted.css
@@ -171,6 +175,7 @@ reset:
         javascript/react/unformatted.jsx \
         javascript/react/unlinted.jsx \
         json/unformatted.json \
+        markdown/unformatted.md \
         python/unformatted.py \
         python/unlinted.py \
         ruby/unformatted.rb \
@@ -182,7 +187,8 @@ reset:
         typescript/unformatted.ts \
         typescript/unlinted.ts \
         typescript/react/unformatted.tsx \
-        typescript/react/unlinted.tsx
+        typescript/react/unlinted.tsx \
+        yaml/unformatted.yaml
 
 recheck:
     check c/main.c
