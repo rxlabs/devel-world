@@ -21,7 +21,7 @@ fix:
 # TODO
 # fix_stdin:
 #     -cat css/unlinted.css | fix -e css
-#     -cat go/unlinted.go | fix -e go
+#     -cat graphql/unlinted.graphql | fix -e graphql
 #     -cat javascript/unlinted.js | fix -e js
 #     -cat javascript/react/unlinted.jsx | fix -e jsx
 #     -cat python/unlinted.py | fix -e py
@@ -34,6 +34,7 @@ format:
     format css/unformatted.css
     format fish/unformatted.fish
     format go/unformatted.go
+    format graphql/unformatted.graphql
     format html/unformatted.html
     format javascript/unformatted.js
     format javascript/react/unformatted.jsx
@@ -50,6 +51,7 @@ format_stdin:
     cat css/unformatted.css | format -e css
     cat fish/unformatted.fish | format -e fish
     cat go/unformatted.go | format -e go
+    cat graphql/unformatted.graphql | format -e graphql
     cat html/unformatted.html | format -e html
     cat javascript/unformatted.js | format -e js
     cat javascript/react/unformatted.jsx | format -e jsx
@@ -65,6 +67,7 @@ lint:
     -lint css/unlinted.css
     -lint fish/unlinted.fish
     -lint go/unlinted.go
+    -lint graphql/unlinted.graphql
     -lint javascript/unlinted.js
     -lint javascript/react/unlinted.jsx
     -lint json/unlinted.json
@@ -79,6 +82,7 @@ lint_stdin:
     -cat css/unlinted.css | lint --extension css
     -cat fish/unlinted.fish | lint --extension fish
     -cat go/unlinted.go | lint --extension go
+    -cat graphql/unlinted.graphql | lint --extension graphql
     -cat javascript/unlinted.js | lint --extension js
     -cat javascript/react/unlinted.jsx | lint --extension jsx
     -cat json/unlinted.json | lint --extension json
@@ -155,6 +159,8 @@ reset:
         c/unformatted.c \
         css/unformatted.css \
         css/unlinted.css \
+        graphql/unformatted.graphql \
+        graphql/unlinted.graphql \
         fish/unformatted.fish \
         fish/unlinted.fish \
         go/unformatted.go \
