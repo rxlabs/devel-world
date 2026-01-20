@@ -31,6 +31,7 @@ fix:
 
 format:
     format c/unformatted.c
+    format clojure/unformatted.clj
     format css/unformatted.css
     format fish/unformatted.fish
     format go/unformatted.go
@@ -50,6 +51,7 @@ format:
 
 format_stdin:
     cat c/unformatted.c | format -e c
+    cat clojure/unformatted.clj | format -e clj
     cat css/unformatted.css | format -e css
     cat fish/unformatted.fish | format -e fish
     cat go/unformatted.go | format -e go
@@ -161,6 +163,7 @@ reset:
 
     git checkout \
         c/unformatted.c \
+        clojure/unformatted.clj \
         css/unformatted.css \
         css/unlinted.css \
         graphql/unformatted.graphql \
