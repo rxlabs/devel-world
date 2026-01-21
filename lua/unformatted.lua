@@ -1,3 +1,3 @@
 function hello_world()
-print("Hello, world!")
+print("Hello, World!")
 end

@@ -1,4 +1,4 @@
 function hello_world()
 	local x = ""
-	print("Hello, world!")
+	print("Hello, World!")
 end
