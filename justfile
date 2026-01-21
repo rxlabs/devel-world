@@ -13,6 +13,7 @@ fix:
     -fix go/unlinted.go
     -fix javascript/unlinted.js
     -fix javascript/react/unlinted.jsx
+    -fix php/unlinted.php
     -fix python/unlinted.py
     -fix ruby/unlinted.rb
     -fix typescript/unlinted.ts
@@ -24,6 +25,7 @@ fix:
 #     -cat graphql/unlinted.graphql | fix -e graphql
 #     -cat javascript/unlinted.js | fix -e js
 #     -cat javascript/react/unlinted.jsx | fix -e jsx
+#     -cat php/unlinted.php | fix -e php
 #     -cat python/unlinted.py | fix -e py
 #     -cat ruby/unlinted.rb | fix -e rb
 #     -cat typescript/unlinted.ts | fix -e ts
@@ -42,6 +44,7 @@ format:
     format json/unformatted.json
     format markdown/unformatted.md
     format lua/unformatted.lua
+    format php/unformatted.php
     format python/unformatted.py
     format ruby/unformatted.rb
     format shell/unformatted.sh
@@ -63,6 +66,7 @@ format_stdin:
     cat json/unformatted.json | format -e json
     cat markdown/unformatted.md | format -e md
     cat lua/unformatted.lua | format -e lua
+    cat php/unformatted.php | format -e php
     cat python/unformatted.py | format -e py
     cat ruby/unformatted.rb | format -e rb
     cat shell/unformatted.sh | format -e sh
@@ -81,6 +85,7 @@ lint:
     -lint javascript/react/unlinted.jsx
     -lint json/unlinted.json
     -lint lua/unlinted.py
+    -lint php/unlinted.php
     -lint python/unlinted.py
     -lint ruby/unlinted.rb
     -lint shell/unlinted.sh
@@ -98,6 +103,7 @@ lint_stdin:
     -cat javascript/react/unlinted.jsx | lint --extension jsx
     -cat json/unlinted.json | lint --extension json
     -cat lua/unlinted.lua | lint --extension lua
+    -cat php/unlinted.php | lint --extension php
     -cat python/unlinted.py | lint --extension py
     -cat ruby/unlinted.rb | lint --extension rb
     -cat shell/unlinted.sh | lint --extension sh
@@ -109,6 +115,7 @@ repl:
     repl fish/lib.fish
     repl javascript/lib.js
     repl lua/lib.lua
+    repl php/lib.php
     repl python/lib.py
     repl ruby/lib.rb
     repl typescript/lib.ts
@@ -119,6 +126,7 @@ run:
     run go/main.go
     run javascript/main.js
     run lua/main.lua
+    run php/main.php
     run python/main.py
     run ruby/main.rb
     run shell/main.sh
@@ -131,6 +139,7 @@ run_stdin:
     cat go/main.go | run -e go
     cat javascript/main.js | run -e js
     cat lua/lua.py | run -e lua
+    cat php/main.php | run -e php
     cat python/main.py | run -e py
     cat ruby/main.rb | run -e rb
     cat shell/main.sh | run -e sh
@@ -140,6 +149,7 @@ run_stdin:
 check:
     -check c/unchecked.c
     -check go/unchecked.go
+    -check php/unchecked.php
     -check python/unchecked.py
     -check typescript/unchecked.ts
     -check typescript/react/unchecked.tsx
@@ -148,6 +158,7 @@ check:
 # check_stdin:
 #     -cat c/unchecked.c | check -e c
 #     -cat go/unchecked.go | check -e go
+#     -cat php/unchecked.php | check -e php
 #     -cat python/unchecked.py | check -e py
 #     -cat typescript/unchecked.ts | check -e ts
 #     -cat typescript/react/unchecked.tsx | check -e tsx
@@ -189,6 +200,8 @@ reset:
         javascript/react/unlinted.jsx \
         json/unformatted.json \
         markdown/unformatted.md \
+        php/unformatted.php \
+        php/unlinted.php \
         python/unformatted.py \
         python/unlinted.py \
         ruby/unformatted.rb \
@@ -206,6 +219,8 @@ reset:
 recheck:
     check c/main.c
     check go/main.go
+    check php/main.php
+    check php/lib.php
     check python/main.py
     check python/lib.py
     check ruby/main.rb
@@ -226,6 +241,9 @@ relint:
     format javascript/react/index.jsx
     format lua/main.lua
     format lua/lib.lua
+    format php/main.php
+    format php/lib.php
+    format php/unchecked.php
     format python/main.py
     format python/lib.py
     format python/unchecked.py
@@ -261,6 +279,10 @@ reformat:
     format lua/main.lua
     format lua/lib.lua
     format lua/unlinted.lua
+    format php/main.php
+    format php/lib.php
+    format php/unlinted.php
+    format php/unchecked.php
     format python/main.py
     format python/lib.py
     format python/unlinted.py
