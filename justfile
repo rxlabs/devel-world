@@ -214,6 +214,32 @@ recheck:
     check typescript/lib.ts
     check typescript/react/index.tsx
 
+relint:
+    format index.html
+    format c/main.c
+    format fish/main.fish
+    format fish/lib.fish
+    format go/main.go
+    format javascript/main.js
+    format javascript/index.js
+    format javascript/lib.js
+    format javascript/react/index.jsx
+    format lua/main.lua
+    format lua/lib.lua
+    format python/main.py
+    format python/lib.py
+    format python/unchecked.py
+    format ruby/main.rb
+    format ruby/lib.rb
+    format shell/main.sh
+    format shell/main.zsh
+    format typescript/main.ts
+    format typescript/index.ts
+    format typescript/lib.ts
+    format typescript/unchecked.ts
+    format typescript/react/index.tsx
+    format typescript/react/unchecked.tsx
+
 reformat:
     format index.html
     format c/main.c
