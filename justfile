@@ -41,6 +41,7 @@ format:
     format javascript/react/unformatted.jsx
     format json/unformatted.json
     format markdown/unformatted.md
+    format lua/unformatted.lua
     format python/unformatted.py
     format ruby/unformatted.rb
     format shell/unformatted.sh
@@ -61,6 +62,7 @@ format_stdin:
     cat javascript/react/unformatted.jsx | format -e jsx
     cat json/unformatted.json | format -e json
     cat markdown/unformatted.md | format -e md
+    cat lua/unformatted.lua | format -e lua
     cat python/unformatted.py | format -e py
     cat ruby/unformatted.rb | format -e rb
     cat shell/unformatted.sh | format -e sh
@@ -78,6 +80,7 @@ lint:
     -lint javascript/unlinted.js
     -lint javascript/react/unlinted.jsx
     -lint json/unlinted.json
+    -lint lua/unlinted.py
     -lint python/unlinted.py
     -lint ruby/unlinted.rb
     -lint shell/unlinted.sh
@@ -94,6 +97,7 @@ lint_stdin:
     -cat javascript/unlinted.js | lint --extension js
     -cat javascript/react/unlinted.jsx | lint --extension jsx
     -cat json/unlinted.json | lint --extension json
+    -cat lua/unlinted.lua | lint --extension lua
     -cat python/unlinted.py | lint --extension py
     -cat ruby/unlinted.rb | lint --extension rb
     -cat shell/unlinted.sh | lint --extension sh
@@ -104,6 +108,7 @@ lint_stdin:
 repl:
     repl fish/lib.fish
     repl javascript/lib.js
+    repl lua/lib.lua
     repl python/lib.py
     repl ruby/lib.rb
     repl typescript/lib.ts
@@ -113,6 +118,7 @@ run:
     run fish/main.fish
     run go/main.go
     run javascript/main.js
+    run lua/main.lua
     run python/main.py
     run ruby/main.rb
     run shell/main.sh
@@ -124,6 +130,7 @@ run_stdin:
     cat fish/main.fish | run -e fish
     cat go/main.go | run -e go
     cat javascript/main.js | run -e js
+    cat lua/lua.py | run -e lua
     cat python/main.py | run -e py
     cat ruby/main.rb | run -e rb
     cat shell/main.sh | run -e sh
@@ -225,6 +232,9 @@ reformat:
     format javascript/react/index.jsx
     format javascript/react/unlinted.jsx
     format json/unlinted.json
+    format lua/main.lua
+    format lua/lib.lua
+    format lua/unlinted.lua
     format python/main.py
     format python/lib.py
     format python/unlinted.py
