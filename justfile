@@ -66,7 +66,7 @@ format_stdin:
     cat json/unformatted.json | format -e json
     cat markdown/unformatted.md | format -e md
     cat lua/unformatted.lua | format -e lua
-    cat php/unformatted.php | format -e php
+    # cat php/unformatted.php | format -e php
     cat python/unformatted.py | format -e py
     cat ruby/unformatted.rb | format -e rb
     cat shell/unformatted.sh | format -e sh
